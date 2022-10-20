@@ -215,16 +215,14 @@
         }
         function btnDClick(e){
             active = false;
-            //rest = rest + 3;
-            //minute = minute + 3;
-            period = period + 3;
+            $("#minuteStr").html("h");
+            $("#minute").val("3");
 
         }
         function btnEClick(e){
             active = false;
-            //rest = rest + 5;
-            //minute = minute + 5;
-            period = period + 5;
+            $("#minute").val("5");
+            //alarm();
         }
 
         // 繰り返し実行する処理
