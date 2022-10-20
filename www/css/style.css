@@ -69,6 +69,12 @@
         font-size: 20px;
         position:absolute; top:440px; left:50%; width:48%; height:50px; 
     }
+    #btnReset{
+        background-color: yellow;
+        color: black;
+        font-size: 40px;
+        position:absolute; top:580px; left:10%; width:80%; height:80px;
+    }
     
     #minute {
         font-size: 30px;

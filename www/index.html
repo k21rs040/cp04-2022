@@ -45,6 +45,9 @@
              $('#btnE').click(function(e) {
                 btnEClick(e);
             });
+             $('#btnReset').click(function(e) {
+                btnResetClick(e);
+            });
             init();
         });
 
@@ -170,6 +173,7 @@
             $('#btnC').prop('disabled', false);
             $('#btnD').prop('disabled', false);
             $('#btnE').prop('disabled', false);
+            $('#btnReset').prop('disabled', false);
 
         }
 
@@ -215,14 +219,25 @@
         }
         function btnDClick(e){
             active = false;
-            $("#minuteStr").html("h");
+            $("#minuteStr").html("○ButtonD : 3minute pushed!");
+            $("#secondStr").html("○ButtonE : 5minute");
             $("#minute").val("3");
 
         }
         function btnEClick(e){
             active = false;
+            $("#secondStr").html("○ButtonE : 5minute pushed!");
+            $("#minuteStr").html("○ButtonD : 3minute");
             $("#minute").val("5");
             //alarm();
+        }
+        function btnResetClick(e){
+            active = false;
+            $("#minute").val("0");
+            $("#second").val("0");
+            $("#minuteStr").html("○ButtonD : 3minute");
+            $("#secondStr").html("○ButtonE : 5minute");
+            alarm();
         }
 
         // 繰り返し実行する処理
@@ -257,6 +272,7 @@
     <button id="btnC">Set</button>
     <button id="btnD">3min</button>
     <button id="btnE">5min</button>
+    <button id="btnReset">Reset</button>
     <input type="number" id="minute" value=0>
     <input type="number" id="second" value=0>
 </body>
